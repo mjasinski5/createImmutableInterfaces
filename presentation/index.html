@@ -48,7 +48,7 @@
             <h2>Agenda</h2>
             <ul class="unordered-list">
               <li><s>04.11 - A brief introduction to modern JavaScript</s></li><br/>
-              <li>18.11 - NodeJS for Dummies</li><br/>
+              <li><s>18.11 - NodeJS for Dummies</s> </li><br/>
               <li>25.11 - ReactJS – creating immutable interfaces</li><br/>
               <li>02.12 - UI Development</li><br/>
               <li>09.12 - <a>?</a></li>
@@ -63,38 +63,34 @@
 
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
-            <h2>Node.js for dummies</h2>
-            <img src="lib/img/writeAllTheCode.jpg" />
+            <h3>ReactJS – creating immutable interfaces</h3>
+            <img height="355" width="500" src="lib/img/blackReactjs.png" />
             <div class="authors-footer" style="font-size:30px">
-              <p>Sebastian Domagała</p>
+              <p>Mariusz Jasiński</p>
             </div>
           </section>
 
           <section>
-            <h3> What are we going to talk about today: </h3>
+            <h3> Agenda </h3>
             <ul>
-              <li class="fragment"> A bit too short introduction of Node </li>
-              <li class="fragment"> What makes it so easy... </li>
-              <li class="fragment"> ...and why you should be careful </li>
-              <li class="fragment"> Beer-as-a-Service </li>
-              <li class="fragment"> Microservices </li>
-
+              <li class="fragment fade-up"> Short story about Web Development.. Why we need ReactJS? </li>
+					  	<p><li class="fragment">ReactJS Basics...</span> <span class="fragment">JSX...</span> <span class="fragment">lifecycle methods...</span> <span class="fragment">rendering...</span> <span class="fragment">and many more.</li></p>
+              <li class="fragment"> Few worlds about state management... <span class="fragment">Redux...?</span>  <span class="fragment"> ...MOBX?</span></li>
+              <li class="fragment"> Live Demo </li>
+              <li class="fragment"> When should we use ReactJS ecosystem? </li>
               <li class="fragment"> Q&A </li>
             </ul>
           </section>
         </section>
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
-            <h3> Let's talk Node </h3>
+            <h3> Story of Web Development</h3>
 
-            <p class="fragment"> Did we even need another programming language? </p>
+            <p class="fragment"> Old brothers..</p>
             <ul>
-              <li class="fragment"> Brings event-driven programming to web servers - no need for threading </li>
-              <li class="fragment"> Lightweight</li>
-              <li class="fragment"> Stateless </li>
-              <li class="fragment"> Non-blocking IO</li>
-              <li class="fragment"> Perfect for microservices </li>
-              <li class="fragment"> NPM </li>
+              <li class="fragment"> jQuery</li>
+              <li class="fragment"> Ajax </li>
+              <li class="fragment"> Thousands of html pages.. </li>
             </ul>
             <aside class="notes">
               - Respond to system events, nothing on its own <br/>
@@ -108,16 +104,36 @@
             </aside>
           </section>
           <section>
-            <h3> Let's talk Node </h3>
-            <p> <div class="fragment">Why we use only one thread...</div> <div class="fragment"> And why it <b>does NOT</b> matter? </div></p>
-            <img class="fragment" src="lib/img/event-loop.jpg" />
-            <br/>
-            <br/>
-
+            <h2> Potential problems? </h2>
+            <ul class="unordered-list">
+              <li class="fragment"> Page reloads</li>
+              <li class="fragment"> A lot of code duplication</li>
+              <li class="fragment"> it simple doesn't scale</li>
+            </ul>
+          </section>
+          <section>
+            <h2> Solution? </h2>
+          </section>
+          <section>
+            <h3> SPA - Single Page Applications </h3>
+            
+            <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+						A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a user experience similar to that of a desktop application. 
+            In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load
+					</blockquote>
             <aside class="notes">
               - non-blocking IO<br/>
               - multithreading behind the scenes ( by OS )
             </aside>
+          </section>
+          <section>
+            <h2>Example of JS SPA frameworks</h2>
+            <ul class="unordered-list">
+              <li> Angular (2010) </li>
+              <li> Backbone (2010) </li>
+              <li> EmberJS (2011) </li>
+
+            </ul>
           </section>
           <section>
           <pre><code>
