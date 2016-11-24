@@ -4,7 +4,7 @@ import 'whatwg-fetch';
 import './App.css';
 import Image from './Components/Image';
 import IndexButton from './Components/IndexButton';
-import TwentyTwenty from 'react-twentytwenty';
+import Surprise from './Components/Surprise';
 
 class App extends Component {
 
@@ -13,7 +13,8 @@ class App extends Component {
 
     this.state = { 
       images: [],
-      currentIndex: 0
+      currentIndex: 0,
+      surprise: false
     };
 
     this.setImages = this.setImages.bind(this);
@@ -21,6 +22,11 @@ class App extends Component {
     this.handlerLeft = this.handlerLeft.bind(this);
     this.handlerRight = this.handlerRight.bind(this);
     this.handlerRandomize = this.handlerRandomize.bind(this);
+    this.handlerSurprise = this.handlerSurprise.bind(this);
+  }
+
+  componentDidMount() {
+    this.fetchImages();
   }
 
   setImages(imgs) {
@@ -47,10 +53,6 @@ class App extends Component {
       .then((urls) => this.setImages(urls))
       .catch((e) => console.log(e));
 
-  }
-
-  componentDidMount() {
-    this.fetchImages();
   }
 
   changeIndex(delta) {
@@ -83,27 +85,33 @@ class App extends Component {
     this.changeIndex(randomIndex);
   }
 
+  handlerSurprise() { 
+    this.setState({
+      surprise: !this.state.surprise
+    });
+  }
+
   render() {
-
-    const images = this.state.images.map((url, key) => <Image url={url} />);
+    const images = this.state.images.map((url) => <Image url={url} />);
+    
     const currentIndex = this.state.currentIndex;
-
+    const elementToShow = this.state.surprise ? <Surprise images={images} currentIndex={currentIndex} /> : images[currentIndex]; 
+    
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Image Girl Slider</h2>
+          <h2>Welcome to (un)Naked Image Girl Slider</h2>
         </div>
         <p>
           <IndexButton handler={this.handlerRight} text="+++" />
           <IndexButton handler={this.handlerLeft} text="---" />
           <IndexButton handler={this.handlerRandomize} text="RANDOMIZE!!" />
+          <IndexButton handler={this.handlerSurprise} text="Surprise :) !!" />
         </p>
 
-          <TwentyTwenty>
-            {images[currentIndex]}
-            {images[currentIndex + 1]}
-          </TwentyTwenty>
+      {elementToShow}
+
       </div>
     );
   }

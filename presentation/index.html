@@ -112,6 +112,12 @@
             </ul>
           </section>
           <section>
+            <h2>Example</h2>
+            <img src="lib/img/transfer1.png"></img>
+            <img src="lib/img/transfer2.png"></img>
+
+          </section>
+          <section>
             <h2> Solution? </h2>
           </section>
           <section>
@@ -219,6 +225,8 @@ We built React to solve one problem: building large applications with data that
                 )
               }
           </code></pre>
+                    <div class="fragment"> <font color="green"> INFO! This is an example of "DUMB" component. What is the opposite? Find out :)</font></li>
+
           </section>
         <section>
           <img src="lib/img/thinking.png"></img>
@@ -296,48 +304,53 @@ We built React to solve one problem: building large applications with data that
             handlePropsChange(e) {
               this.props.propsText = "Karol Kowalski";
               console.log("props", this.props.propsText); 
-              //loguje Karol Kowalski, 
-              //ale na ekranie nic sie nie zmienia
+              //logs Karol Kowalski, 
+              //but on screen nothing has changed!
             }
             (...)
             <h1>props: {this.props.propsText}</h1>
-            //loguje starą wartość "propsText"
+            //logs old value! : "propsText"
             </code></pre>
+            <div class="fragment"><font color="red">Why? We've changed this.props. ReactJS doesnt care about that... :)</font></div>
           </section>
 
           <section>
             handleStateChangeBad
             <pre><code>
             handleStateChangeBad(e) {
-              //Źle! render nie zostanie uruchomiony! 
-              //Bezposrednie przypisanie nie zadziała.
+              //Wrong!! Render function wont be executed! 
+              //Direct assign wont work.
               this.state.text = "Karol Kowalski"; 
               
               console.log("state", this.state.text);
-              //Wyloguje Karol Kowalski.. :)
+              //Logs Karol Kowalski.. :)
             }
             (...)
             <h1>state: {this.state.text} </h1>
             //Mariusz Jasinski
 
             </code></pre>
+            <div class="fragment"><font color="red">Why? We've changed this.state, but... direct assign to variable wont work.</font></div>
+
           </section>
 
           <section>
             handleStateChangeGood
             <pre><code>
             handleStateChangeGood(e) {
-              //Wszystko dobrze, render zostanie uruchomiony
-              //zostalo uzyte this.setState!
+              //Everything is fine!
+              //this.setState has been used!
               this.setState({text: "Mariusz Jasinski The Second"}) 
               
               console.log("state", this.state.text);
-              //Oczywiscie wyloguje Mariusz Jasinski The Second
+              //logs Mariusz Jasinski The Second
             }
             (...)
             <h1>state: {this.state.text} </h1>
-            //nowa wartość, Mariusz Jasinski The Second
+            //Mariusz Jasinski The Second
             </code></pre>
+            <div class="fragment"><font color="green">Success! We've changed state and also we used this.setState for that!</font></div>
+
           </section>
 
 
@@ -453,7 +466,7 @@ We built React to solve one problem: building large applications with data that
                 <li> What is your purpose? </li>
                 <li class="fragment"> Big application? </li>
                 <li class="fragment">Prototype?</li>
-               <blockquote cite="http://redux.js.org/">
+               <blockquote class="fragment" cite="http://redux.js.org/">
                 “Love what you're doing with Redux”, <br>
                   Jing Chen, creator of Flux
 					     </blockquote>
