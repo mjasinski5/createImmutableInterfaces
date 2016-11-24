@@ -45,11 +45,11 @@
           </section>
 
           <section>
-            <h2>Agenda</h2>
+            <h2>Web Developement Schedule</h2>
             <ul class="unordered-list">
               <li><s>04.11 - A brief introduction to modern JavaScript</s></li><br/>
               <li><s>18.11 - NodeJS for Dummies</s> </li><br/>
-              <li>25.11 - ReactJS – creating immutable interfaces</li><br/>
+              <li><b>25.11 - ReactJS – creating immutable interfaces</b></li><br/>
               <li>02.12 - UI Development</li><br/>
               <li>09.12 - <a>?</a></li>
             </ul>
@@ -76,8 +76,8 @@
               <li class="fragment fade-up"> Short story about Web Development.. Why we need ReactJS? </li>
 					  	<p><li class="fragment">ReactJS Basics...</span> <span class="fragment">JSX...</span> <span class="fragment">lifecycle methods...</span> <span class="fragment">rendering...</span> <span class="fragment">and many more.</li></p>
               <li class="fragment"> Few worlds about state management... <span class="fragment">Redux...?</span>  <span class="fragment"> ...MOBX?</span></li>
-              <li class="fragment"> Live Demo </li>
-              <li class="fragment"> When should we use ReactJS ecosystem? </li>
+              <li class="fragment"> Live Demo - (Un)Naked Image Slider</li>
+              <li class="fragment"> What's next?</li>
               <li class="fragment"> Q&A </li>
             </ul>
           </section>
@@ -117,7 +117,7 @@
           <section>
             <h3> SPA - Single Page Applications </h3>
             
-            <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
+          <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
 						A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a user experience similar to that of a desktop application. 
             In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load
 					</blockquote>
@@ -127,104 +127,389 @@
             </aside>
           </section>
           <section>
-            <h2>Example of JS SPA frameworks</h2>
+            <h2>Examples of JS SPA frameworks</h2>
             <ul class="unordered-list">
-              <li> Angular (2010) </li>
-              <li> Backbone (2010) </li>
-              <li> EmberJS (2011) </li>
+              <li class="fragment"> Angular (2010) </li>
+              <li class="fragment"> Backbone (2010) </li>
+              <li class="fragment"> Knockout (2010) </li>
+              <li class="fragment"> EmberJS (2011) </li>
+              <li class="fragment"> <b>ReactJS (2013) </b></li>
+              <li class="fragment">.. and many more</li>
+            </ul>
+          </section>     
+      </section>
 
+      <section data-background-image="lib/repeatable_pattern_background.jpg">
+        <section>
+            <h2>ReactJS</h2>
+            <blockquote>
+						React is a JavaScript library for creating user interfaces by Facebook and Instagram. Many people choose to think of React as the V in MVC.
+We built React to solve one problem: building large applications with data that changes over time.
+					</blockquote>          
+          </section>
+          <section>
+            <img src="lib/img/lech1.jpg"></img>
+          </section>
+          <section>
+            <h2> Facebook - the Problem Solver </h2>
+            <ul class="unordered-list">
+              <li> Translator Hip Hop for PHP (HipHop Virtual Machine)</li>
+              <li> ReactJS </li>
+              <li> Jordan Walke – Software engineer at Facebook who created React.</li>
+              <li> Pete Hunt – extracted React from Facebook code to make it Open Source</li>
+            </ul>
+
+            
+          </section>
+
+          <section>
+            <h3> Almost ended my Hello World ReactJS application..</h3>
+            <img src="lib/img/pic.png"> </img>
+          </section>
+
+          <section>
+            <h2>ReactJS - core concepts</h2>
+            <ul class="unordered-list">
+              <li>Virtual DOM</li>
+              <li>One direction data flow</li>
+              <li>Components </li>
             </ul>
           </section>
+
           <section>
-          <pre><code>
-  function przygotujPiwo(chmiel, callback) {
-    dodajChmiel(chmiel, function(brzeczka) {
-      const temperatura = '10'; //stopnie Celsjusza
-      schładzajBrzeczke(brzeczka, temperatura, function(schlodzonaBrzeczka) {
-        dodajDrożdżeDoBrzeczki(drożdze, brzeczka, function(piwo) {
-          callback(piwo);
-        });
-      });
-    });
-  });
+            <h2> Virtual DOM <h2>
+          </section>
+                    
+          <section>
+            <h3> Nieogarnięta Katarzyna (DOM) </h3> <br> vs <br><br> <h3>Inteligentna Martyna (V-DOM)</h3>
+          </section>
+
+          <section>
+            <img src="lib/img/virtual.png" />
+          </section>
+          <section>
+            <h2>Benefits?</h2>
+            <ul class="unordered-list">
+              <li>Speed..</li>
+              <li>Speed..</li>
+              <li>Easier to test :) Why? Additional level of abstraction. </li>
+            </ul>
+          </section>
+
+          <section>
+            One direction data flow
+          </section>
+
+          <section>
+            Components
+          </section>
+
+          <section>
+            <pre><code>
+              class Welcome extends React.Component {
+                render() {
+                  return <h1>Hello, {this.props.name}</h1>;
+                }
+              }
           </code></pre>
-          <img height="50%" src="lib/img/event-loop.jpg" />
+          <pre><code>
+              function welcome({name}) => { 
+                return (
+                  <h1>Hello, {name}</h1>;
+                )
+              }
+          </code></pre>
+          </section>
+        <section>
+          <img src="lib/img/thinking.png"></img>
         </section>
+
+
+        </section>
+
       </section>
         <section data-background-image="lib/repeatable_pattern_background.jpg">
+
           <section>
-            <h2>So... <br/>let's get our hands dirty</h2>
-            <br/>
-            <br/>
-            <img src="lib/img/hack-the-planet.gif" />
-            <aside class="notes">
-              Real life example<br/>
-              zawsze lubimy rozmawiac o rzeczach na ktorych sami sie znamy
-            </aside>
+            Rendering components and props/state
           </section>
-          <section>
-            <h2>Beer-as-a-Service</h2>
-            <blockquote style="font-size: 20px; text-align: center">
-              <p>Not the service we deserved, but the one that we needed</p>
-              <footer style="text-align: right; margin-right: 30px">- some guy from the internet</footer>
-            </blockquote>
-            <aside class="notes">
-              Prosta aplikacja bo prosty wykład<br/>
-              Callbacks
-            </aside>
-          </section>
-        </section>
-        <section data-background-image="lib/repeatable_pattern_background.jpg">
-          <section>
-            <h2>LIVE DEMO</h2>
-          </section>
-        </section>
-      <section data-background-image="lib/repeatable_pattern_background.jpg">
-        <section>
-          <h2>Need another reason to learn Node?</h2>
-        </section>
-        <section>
-          <h2>Program everything!</h2>
-          <img class="fragment" width="150" height="150" src="lib/img/chrome-logo.jpg" />
-          <img class="fragment" width="150" height="150" src="lib/img/node-logo.jpg" />
-          <img class="fragment" width="150" height="150" src="lib/img/electron-logo.png" />
-          <img class="fragment" width="150" height="150" src="lib/img/react-logo.jpg" />
-          <img class="fragment" width="150" height="150" src="lib/img/cylon-logo.png" />
-        </section>
-        <section>
-          <h2>Community</h2>
-          <a class="fragment" target="_blank" href="http://github.audio">GitHub Audio</a><br />
-          <a class="fragment" target="_blank" href="https://www.npmjs.com/">npm</a>
-        </section>
-        <section>
-          <h2> Bright future </h2>
-          <ul>
-            <li class="fragment">First stable Node.js release (0.10) - <b>11 March 2013</b></li>
-            <li class="fragment">First stable PRODUCTION release (4.0.0) - <b>08 September 2015</b></li>
-
-            <li class="fragment">First stable React release (0.3.0) - <b>29 May 2013</b></li>
-
-            <li class="fragment"> First stable Cylon.js release (1.0.0) - <b>8 April 2015</b></li>
-
-            <li class="fragment"> <b>MICROSERVICES</b> </li>
-
-          </ul>
           <aside class="notes">
-            - So much has been done over 3 years
-            - You all can engage
+              in React its all about rendering... efficient rendering :) 
           </aside>
+
+          <section>
+            <h2>Challenge</h2> 
+            <pre><code>
+                            this.props
+                                vs 
+                            this.state  
+            </code></pre>
+          </section>
+
+          <section>
+            <h2> Props </h2> 
+
+              <pre><code>
+              class welcome extends React.Component {
+                render() {
+                  return <h1>Hello, {this.props.name}</h1>;
+                }
+              }
+          </code></pre>
+
+           <pre><code>
+              render() {
+                <Welcome name="Mariusz Jasinski"> </Welcome>
+              }
+          </code></pre>
+          </section>
+
+          <section>
+            <h2>State</h2>
+            <pre><code>
+              class welcome extends React.Component {
+                constructor() { 
+                  this.state = { name: "Mariusz Jasinski"}
+                }
+
+                render() {
+                  return <h1>Hello, {this.state.name}</h1>;
+                }
+              }
+            </code></pre>
+
+            <pre><code>
+              render() {
+                <Welcome></Welcome>
+              }
+          </code></pre>
+          </section>
+
+          <section>
+<p data-height="754" data-theme-id="0" data-slug-hash="VmpRmN" data-default-tab="result" data-user="enfer" data-embed-version="2" data-pen-title="Hello World in React" class="codepen">See the Pen <a href="http://codepen.io/enfer/pen/VmpRmN/">Hello World in React</a> by Mariusz Jasiski (<a href="http://codepen.io/enfer">@enfer</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+          </section>
+
+          <section>
+            handlePropsChange
+            <pre><code>
+            handlePropsChange(e) {
+              this.props.propsText = "Karol Kowalski";
+              console.log("props", this.props.propsText); 
+              //loguje Karol Kowalski, 
+              //ale na ekranie nic sie nie zmienia
+            }
+            (...)
+            <h1>props: {this.props.propsText}</h1>
+            //loguje starą wartość "propsText"
+            </code></pre>
+          </section>
+
+          <section>
+            handleStateChangeBad
+            <pre><code>
+            handleStateChangeBad(e) {
+              //Źle! render nie zostanie uruchomiony! 
+              //Bezposrednie przypisanie nie zadziała.
+              this.state.text = "Karol Kowalski"; 
+              
+              console.log("state", this.state.text);
+              //Wyloguje Karol Kowalski.. :)
+            }
+            (...)
+            <h1>state: {this.state.text} </h1>
+            //Mariusz Jasinski
+
+            </code></pre>
+          </section>
+
+          <section>
+            handleStateChangeGood
+            <pre><code>
+            handleStateChangeGood(e) {
+              //Wszystko dobrze, render zostanie uruchomiony
+              //zostalo uzyte this.setState!
+              this.setState({text: "Mariusz Jasinski The Second"}) 
+              
+              console.log("state", this.state.text);
+              //Oczywiscie wyloguje Mariusz Jasinski The Second
+            }
+            (...)
+            <h1>state: {this.state.text} </h1>
+            //nowa wartość, Mariusz Jasinski The Second
+            </code></pre>
+          </section>
+
+
+          <section>
+            <h2> Conlusion? </h2>
+
+            <ul class="unordered-list">
+               Rules to follow: <br><br>
+              <li class="fragment">this.state has been changed..</li>
+              <li class="fragment"> this.setState has been used (no direct assign allowed).. so </li>
+              <li class="fragment"><font color="red"><s>this.state.variable = "Mariusz"</s>></font></li>
+              <li class="fragment"><font color="green">this.setState({variable: "Mariusz"})</font></li>
+            </ul>
+          </section>
+
+          <section>
+            <h2> JSX </h2>
+            <pre><code>
+              const element = <h1>Hello, world!</h1>;
+              ......
+              render() { 
+                return (
+                  <jakisComponent> </jakiscomponent>
+                  <div> Jakis Tekst </div>
+                  {this.props.name}
+                )
+              }
+            </code></pre>
+          </section>
+
+          <section>
+            <h2> Conlusion? </h2>
+            <b>Its similar to template language (e.g handlebars) but it has a full power of Javascript :) </b> </br></br>
+          </section>
+
+          <section>
+            <h2>Lifecycle methods</h2>
+            <br/>
+            <ul class="unordered-list">
+              <li>constructor</li>
+              <li>componentWillMount</li>
+              <li><b>componentDidMount</b></li>
+              <li>componentWillReceiveProps</li>
+              <li>shouldComponentUpdate</li>
+              <li><b>componentWillUpdate </b>
+              <li><b>componentDidUpdate</b></li>
+              <li>componentWillUnmount</li>
+            </ul>
+            <aside class="notes">
+              Wspominamy tylko o ich istnieniu, nie umawiamy kazdego z osobna - tylko np. dwa przykladowe
+            </aside>
+          </section>
+          <section>
+            <h2>Example component</h2>
+            <pre><code>
+              class App extends Component {
+                componentDidMount() {}
+                componentWillUpadate() {}
+                //(...)
+                componentWillUnmount() {}
+                
+                render() {
+                  return (
+                    <div>Hello</div>
+                  );
+                }
+              }
+</code></pre>
+          </section>
+          <section>
+            <h3>componentWillUpdate </h3>
+            <ul class="unordered-list"> 
+              <li>before render</li>
+              <li>just after receiving new props or state </li> 
+              <li>not for initial render </li>
+            </ul>
+          </section>
+
+          <section>
+            <h3>componentDidMount </h3>
+            <ul class="unordered-list"> 
+              <li>after component is mounted </li>
+              <li>before render</li> 
+              <li>good place to I/O operations</li>
+            </ul>
+          </section>
+
+           <section>
+            <h3>componentDidUpdate </h3>
+            <ul class="unordered-list"> 
+              <li>after render</li> 
+              <li>not for initial render </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Few words about state management... <h2>
+          </section>
+
+          <section>
+            <h2> What is state management?</h2>
+          </section>
+
+          <section>
+              <img src="lib/img/flux.png"></img>
+              <img src="lib/img/redux.png"></img>
+              <img src="lib/img/mobx.png"></img>
+          </section>
+
+          <section>
+              <h2>Choose wisely!</h2>
+              <ul class="unordered-list">
+                <li> What is your purpose? </li>
+                <li class="fragment"> Big application? </li>
+                <li class="fragment">Prototype?</li>
+               <blockquote cite="http://redux.js.org/">
+                “Love what you're doing with Redux”, <br>
+                  Jing Chen, creator of Flux
+					     </blockquote>
+             </ul>
+
+          </section>
         </section>
-        <section>
-          <h3>That's all cool and stuff... but what are the things that might go wrong? </h3>
+        <section data-background-image="lib/repeatable_pattern_background.jpg">
+          <section>
+            <h2>LIVE DEMO - (Un)Naked Image Slider</h2>
+          </section>
         </section>
-        <section>
-          <h2>Let's use example:</h2>
-          <a href="https://medium.com/unboxd/how-i-built-an-app-with-500-000-users-in-5-days-on-a-100-server-77deeb238e83">Poke Chat failure</a>
-        </section>
+      <section data-background-image="lib/repeatable_pattern_background.jpg">
+      <section>
+        <img src="lib/img/end.jpg"></img>
+      </section>
+      <section>
+        <h2>
+        Few numbers...  
+      </h2>
+      </section>
+      <section>
+        54k stars / 5 rank at Github
+      </section>
+      <section>
+        <img height="650" width="900" src="lib/img/trend.png"></img>
+      </section>
+      <section>
+        <img height="650" width="900" src="lib/img/trend2.png"></img>
+      </section>
+       <section>
+        <img height="auto" width="1000" src="lib/img/trend3.png"></img>
+      </section>
+      <section>
+        <h2> What's next? </h2>
+        <ul class="unordered-list">
+          <li><a href="https://github.com/facebookincubator/create-react-app">Create-react-app boilerplate</a></li>
+          <li><a href="https://facebook.github.io/react/docs/thinking-in-react.html"> Thinking in React</a></li>
+          <li><a href="https://facebook.github.io/react/docs/hello-world.html">ReactJS documentation</a></li>
+          <li><a href="http://redux.js.org/">Redux </a></li>
+          <li><a href="https://github.com/krasimir/react-in-patterns/blob/master/README.md"> React in Patterns </a>
+          <li><a href="https://facebook.github.io/react-native/">React Native</a></li>
+        </ul>
+      </section>
+      
+      <section>
+        <h2>React Native</h2>
+      </section>
+
+      <section>
+        <img src="lib/img/every.jpg"></img>
+      </section>
       </section>
       <section data-background-image="lib/repeatable_pattern_background.jpg">
         <section>
-          <img src="lib/img/thats-all-folks.png" />
+          <img src="lib/img/thank.jpg" />
           <h2 class="fragment">Questions?</h2>
         </section>
       </section>
