@@ -13,8 +13,7 @@ class App extends Component {
 
     this.state = { 
       images: [],
-      currentIndex: 0,
-      nextIndex: 1
+      currentIndex: 0
     };
 
     this.setImages = this.setImages.bind(this);
@@ -34,8 +33,7 @@ class App extends Component {
     });
   }
 
-  componentDidMount() {
-
+  fetchImages() {
     const options = {
       method: 'GET',
       headers: {
@@ -46,7 +44,13 @@ class App extends Component {
     fetch('https://api.imgur.com/3/album/XndvI', options)
       .then((res) => res.json())
       .then((json) => this.transformImageData(json))
-      .then((urls) => this.setImages(urls));
+      .then((urls) => this.setImages(urls))
+      .catch((e) => console.log(e));
+
+  }
+
+  componentDidMount() {
+    this.fetchImages();
   }
 
   changeIndex(delta) {
@@ -96,7 +100,7 @@ class App extends Component {
           <IndexButton handler={this.handlerRandomize} text="RANDOMIZE!!" />
         </p>
 
-          <TwentyTwenty verticalAlign="bottom">
+          <TwentyTwenty>
             {images[currentIndex]}
             {images[currentIndex + 1]}
           </TwentyTwenty>
