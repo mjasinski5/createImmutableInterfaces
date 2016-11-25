@@ -1,11 +1,12 @@
 import React from 'react';
+import './../App.css';
 
 const IndexButton = ({handler, text}) => {
     return (
         <div>
-            <button onClick={handler}> {text}</button>
+            <button className="btn" onClick={handler}> {text}</button>
         </div>
     );
 };
 
-export default IndexButton;
+export default IndexButton; 
