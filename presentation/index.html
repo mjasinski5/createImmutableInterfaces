@@ -47,23 +47,15 @@
           <section>
             <h2>Web Developement Schedule</h2>
             <ul class="unordered-list">
-              <li><s>04.11 - A brief introduction to modern JavaScript</s></li><br/>
-              <li><s>18.11 - NodeJS for Dummies</s> </li><br/>
-              <li><b>25.11 - ReactJS – creating immutable interfaces</b></li><br/>
-              <li>02.12 - UI Development</li><br/>
-              <li>09.12 - <a>?</a></li>
+              <li><s>From zero to Web Developer Hero - part 1</s></li><br/>
+              <li>From zero to Web Developer Hero - part 2</li><br/>
             </ul>
-            <aside class="notes">
-              (Microservices, REST, Retrieving data from external sources)<br/>
-              (ReactJS, State management, Immutability)<br/>
-              (CSS/LESS/SASS, HTML5, RWD)
-            </aside>
           </section>
         </section>
 
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
-            <h3>ReactJS – creating immutable interfaces</h3>
+            <h3>ReactJS – How to get rich in the near future?</h3>
             <img height="355" width="500" src="lib/img/blackReactjs.png" />
             <div class="authors-footer" style="font-size:30px">
               <p>Mariusz Jasiński</p>
@@ -73,7 +65,7 @@
           <section>
             <h3> Agenda </h3>
             <ul>
-              <li class="fragment fade-up"> Short story about Web Development.. Why we need ReactJS? </li>
+              <li class="fragment fade-up"> Short story about Web Development.. Why we need ReactJS? Why Endrju decided to go for it ?! </li>
 					  	<p><li class="fragment">ReactJS Basics...</span> <span class="fragment">JSX...</span> <span class="fragment">lifecycle methods...</span> <span class="fragment">rendering...</span> <span class="fragment">and many more.</li></p>
               <li class="fragment"> Few worlds about state management... <span class="fragment">Redux...?</span>  <span class="fragment"> ...MOBX?</span></li>
               <li class="fragment"> Live Demo - (Un)Naked Image Slider</li>
@@ -85,28 +77,17 @@
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
             <h3> Story of Web Development</h3>
-
             <p class="fragment"> Old brothers..</p>
             <ul>
               <li class="fragment"> jQuery</li>
               <li class="fragment"> Ajax </li>
-              <li class="fragment"> Thousands of html pages.. </li>
+              <li class="fragment"> a lot of HTML code  </li>
             </ul>
-            <aside class="notes">
-              - Respond to system events, nothing on its own <br/>
-              - APIs rule - you get functionality from it<br/>
-              - 20-30Mb of RAM while idle, no compiling<br/>
-              - The only source of truth should be some external db <br/>
-              - Every operation on system is async<br/>
-              - Apps nowadays - API consumers, API glue<br/>
-              - highly scalable (stateless apps), performant<br/>
-              - you want to make it, and you want to make it in a day
-            </aside>
           </section>
           <section>
             <h2> Potential problems? </h2>
             <ul class="unordered-list">
-              <li class="fragment"> Page reloads</li>
+              <li class="fragment"> Unnecessary page reloads</li>
               <li class="fragment"> A lot of code duplication</li>
               <li class="fragment"> it simple doesn't scale</li>
             </ul>
@@ -127,10 +108,6 @@
 						A single-page application (SPA) is a web application or web site that fits on a single web page with the goal of providing a user experience similar to that of a desktop application. 
             In an SPA, either all necessary code – HTML, JavaScript, and CSS – is retrieved with a single page load
 					</blockquote>
-            <aside class="notes">
-              - non-blocking IO<br/>
-              - multithreading behind the scenes ( by OS )
-            </aside>
           </section>
           <section>
             <h2>Examples of JS SPA frameworks</h2>
@@ -145,7 +122,15 @@
               <a href="http://dayssincelastjavascriptframework.com/" class="fragment">Days Since Last Javascript Framework</a>
 
             </ul>
-          </section>     
+          </section>    
+          <section>
+            <h2> How to NOT GET lost?</h2>
+            <ul class="unordered-list"> 
+              <li>Dont try everything at once!</li>
+              <li>Pick the one that fascinates you the most</li>
+              <li>Stick with your choice and practice</li>
+            </ul>
+          </section> 
       </section>
 
       <section data-background-image="lib/repeatable_pattern_background.jpg">
@@ -157,6 +142,7 @@ We built React to solve one problem: building large applications with data that
 					</blockquote>          
           </section>
           <section>
+            <h2>Who created ReactJS?</h2>
             <img src="lib/img/lechW.jpg"></img>
           </section>
           <section>
@@ -197,6 +183,16 @@ We built React to solve one problem: building large applications with data that
             <img src="lib/img/virtual.png" />
           </section>
           <section>
+            <h2>Virtual DOM implementations</h2>
+            <ul class="unordered-list">
+              <div> <a href="http://vdom-benchmark.github.io/vdom-benchmark/">http://vdom-benchmark.github.io/vdom-benchmark/</a></div>
+              <li>virtual-dom</li>
+              <li>React-lite</li>
+              <li>cito.js</li>
+              <li>...many others</li>
+            </ul>
+          </section>
+          <section>
             <h2>Benefits?</h2>
             <ul class="unordered-list">
               <li>Speed..</li>
@@ -231,11 +227,6 @@ We built React to solve one problem: building large applications with data that
                     <div class="fragment"> <font color="green"> INFO! This is an example of "DUMB" component. What is the opposite? Find out :)</font></li>
 
           </section>
-        <section>
-          <img src="lib/img/thinking.png"></img>
-        </section>
-
-
         </section>
 
       </section>
@@ -261,14 +252,14 @@ We built React to solve one problem: building large applications with data that
             <h2> Props </h2> 
 
               <pre><code>
-              class welcome extends React.Component {
+              class Welcome extends React.Component {
                 render() {
                   return <h1>Hello, {this.props.name}</h1>;
                 }
               }
           </code></pre>
 
-           <pre><code>
+           <pre><code spellcheck="false">
               render() {
                 <Welcome name="Mariusz Jasinski"> </Welcome>
               }
@@ -359,16 +350,65 @@ We built React to solve one problem: building large applications with data that
 
           <section>
             <h2> Conlusion? </h2>
-
+            <img src="lib/img/immutable.jpeg" />
+            </section>
+          <section>
+            <h2>Rules to follow</h2>
             <ul class="unordered-list">
-               Rules to follow: <br><br>
               <li class="fragment">this.state has been changed..</li>
               <li class="fragment"> this.setState has been used (no direct assign allowed).. so </li>
               <li class="fragment"><font color="red"><s>this.state.variable = "Mariusz"</s>></font></li>
               <li class="fragment"><font color="green">this.setState({variable: "Mariusz"})</font></li>
             </ul>
           </section>
+          <section>
+            <h2>Merging state</h2>
 
+            <pre><code>
+            class Welcome extends React.Component {
+              constructor(props) {
+                super(props);
+
+                this.state = {
+                  variable0: 'testValue'
+                };
+              }
+              componentDidMount() {
+                this.setState({
+                  variable1: 'testValue'
+                });
+                console.log(this.state)
+                //{ variable0: 'testValue', variable1: 'testValue'}
+              }
+              render() {}
+            }
+
+            </code></pre>
+          </section>
+          <section>
+            <h2>WHY?!</h2>
+             <ul class="unordered-list">
+              <div class="fragment"><font color="green">ReactJS promotes <b>immutability</b>. What does it mean?</font></li>
+            </ul>
+          </section>
+          <section>
+            <h2>ES6 Object.assign</h2>
+            <pre><code>
+              const elementToExtend = {
+                someProp: 'value'
+              }
+              Object.assign({}, elementToExtend, { newProp: val})
+            </pre></code>
+          </section>
+          <section>
+          <h2>Many other way to do the same! </h2>
+          <ul class="unordered-list">
+            <li class="fragment">ImmutableJS</li>
+            <li class="fragment">Lodash</li>
+            <li class="fragment">Underscore</li>
+            
+          </ul>
+          </section>
           <section>
             <h2> JSX </h2>
             <pre><code>
@@ -476,7 +516,17 @@ We built React to solve one problem: building large applications with data that
              </ul>
 
           </section>
+                  <section>
+          <h2>Prototype?</h2>
+              <ul class="unordered-list">
+
+            <li>url: <a href="https://mjasinski5.github.io/hackathon/">https://mjasinski5.github.io/hackathon/</a></li>
+            <li>source code: <a href="https://github.com/mjasinski5/hackathon"> https://github.com/mjasinski5/hackathon </a></li>
+              <div>ReactJS + MobX + NodeJS </div>
+            </ul>
         </section>
+        </section>
+
         <section data-background-image="lib/repeatable_pattern_background.jpg">
           <section>
             <h2>LIVE DEMO - (Un)Naked Image Slider</h2>
@@ -516,7 +566,21 @@ We built React to solve one problem: building large applications with data that
       </section>
       
       <section>
-        <h2>React Native</h2>
+        <h2>React Native - mobile development</h2>
+        <ul class="unordered-list">
+          <li>Facebook</li>
+          <li>Instageam</li>
+          <li>Airbnb</li>
+          <li>Discord</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Electron- desktop development</h2>
+        <ul class="unordered-list">
+          <li>Atom</li>
+          <li>Slack</li>
+          <li>Visual Code Studio</li>
+        </ul>
       </section>
 
       <section>
